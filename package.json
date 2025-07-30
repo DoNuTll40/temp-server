@@ -1,0 +1,30 @@
+{
+  "name": "next-temp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev --turbopack\" \"node websocket/socket.js\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "axios": "^1.11.0",
+    "http": "^0.0.1-security",
+    "next": "15.4.4",
+    "prisma": "^6.13.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "recharts": "^3.1.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "concurrently": "^9.2.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "tailwindcss": "^4"
+  }
+}
