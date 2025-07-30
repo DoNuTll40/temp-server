@@ -9,7 +9,7 @@ export default function Dashboard() {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://192.168.1.188:3001/api/ws");
+    const socket = new WebSocket("ws://10.10.10.32:3001/api/ws");
 
     socket.onmessage = (event) => {
       const newData = JSON.parse(event.data);
@@ -32,7 +32,7 @@ export default function Dashboard() {
 
   const getLogs = async () => {
     try {
-      const rs = await axios.get("http://192.168.1.188:3000/api/logs");
+      const rs = await axios.get("http://10.10.10.32:3000/api/logs");
       if (rs.status === 200) {
         const logsFormatted = rs.data.map((item) => ({
           ...item,
